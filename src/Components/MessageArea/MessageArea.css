@@ -1,0 +1,74 @@
+p{
+    font-family:'Titillium Web', sans-serif;
+    /* background-color: rgb(199, 229, 235); */
+}
+
+div#allContact{
+    height: 410px;
+    overflow: auto;
+}
+
+#contact{
+    height: 58px;
+    width: 263px;
+    cursor: pointer;
+}
+
+#allMessages{
+    height: auto;
+    max-height: 340px;
+    overflow: auto;
+}
+#allMessages p{
+    font-family:'Titillium Web', sans-serif;
+}
+
+#allMessages #sendMsg{
+    background-color: #E7FFDB; 
+    border-radius: 15px;
+    width: auto; 
+    height: auto; 
+    float: right; 
+    max-width: 75%; 
+    margin-bottom: 5px;
+}
+
+#allMessages #recvMsg{
+    background-color: rgb(235, 235, 235); 
+    border-radius: 15px;
+    width: auto; 
+    height: auto; 
+    float: left; 
+    max-width: 75%; 
+    margin-bottom: 5px;
+}
+
+#typeMsg{
+    width: 640px;
+    position: absolute;
+    bottom: 70px;
+}
+
+#typeMsg input{
+    height: 43px;
+    border-radius: 20px;
+}
+
+#typeMsg button{
+    margin-left: -18px; 
+    width: 43px; 
+    border-radius: 21.5px;
+}
+
+#typeMsg input::placeholder{
+    color: rgb(184, 184, 184);
+    font-size: 16px;
+}
+
+div#chatarea{
+    visibility: hidden;
+}
+
+#chatCol{
+    box-shadow: 2px 2px 10px rgb(100, 100, 100);
+}

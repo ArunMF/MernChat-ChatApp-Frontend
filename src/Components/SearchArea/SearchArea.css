@@ -1,0 +1,25 @@
+div#allReq{
+    height: 510px;
+    overflow: auto;
+}
+
+#request{
+    height: 75px;
+    width: 340px;
+}
+
+div#searchResult{
+    height: 343px;
+    overflow: auto;
+}
+
+#resContact{
+    height: 58px;
+    width: 276px;
+    background-color: rgb(199, 229, 235);
+}
+
+#search input::placeholder{
+    color: rgb(184, 184, 184);
+    font-size: 16px;
+}

@@ -1,0 +1,13 @@
+*{
+    font-size: 17px;
+}
+p{
+    font-family: 'Titillium Web', sans-serif;
+}
+form{
+    width: 400px;
+}
+
+#inputFld{
+    font-size: 15px;
+}
