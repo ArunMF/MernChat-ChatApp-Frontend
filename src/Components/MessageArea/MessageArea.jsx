@@ -84,7 +84,7 @@ function MessageArea() {
                     <div className='border-bottom' id='allContact'>
                         {
                             allContacts.map((contact) => (
-                                <Row onClick={() => {handleViewContact(contact.email);handleAllMessages(contact.email);}} className='border-bottom rounded py-2 my-2 mx-1' id='contact'>
+                                <Row onClick={() => {handleAllMessages(contact.email);handleViewContact(contact.email);}} className='border-bottom rounded py-2 my-2 mx-1' id='contact'>
                                     <Col className='col-2'>
                                         <img src={contact.imageurl} height="40px" style={{ width: "40px", borderRadius: "20px" }} alt="" />
                                     </Col>
