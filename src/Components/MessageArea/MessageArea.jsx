@@ -67,7 +67,6 @@ function MessageArea() {
         }
     }
 
-
     useEffect(() => {
         handleViewAllContacts()
     })
@@ -116,8 +115,8 @@ function MessageArea() {
                             <MDBDropdown animation={false}>
                                 <MDBDropdownToggle className='border-0 shadow-0 ms-4 mt-1 px-1' style={{ backgroundColor: "#008069" }}><i class="fa-solid fa-ellipsis-vertical fs-6"></i></MDBDropdownToggle>
                                 <MDBDropdownMenu>
-                                    <MDBDropdownItem link>Delete Chat</MDBDropdownItem>
-                                    <MDBDropdownItem link>Remove Contact</MDBDropdownItem>
+                                    {/* <MDBDropdownItem link>Delete Chat</MDBDropdownItem>
+                                    <MDBDropdownItem link>Remove Contact</MDBDropdownItem> */}
                                 </MDBDropdownMenu>
                             </MDBDropdown>
                         </Col>
@@ -127,9 +126,13 @@ function MessageArea() {
                     <Row className='p-3 pb-2' id='allMessages'>
                         {
                             allChats.map((chat) => (
-                                <div>
-                                    <p className='p-2 px-3' id='sendMsg'>{chat.sentMsg}</p>
-                                    <p className='p-2 px-3' id='recvMsg'>{chat.recieveMsg}</p>
+                                <div>{
+                                        chat.sentMsg ?
+                                        <p className='p-2 px-3' id='sendMsg'>{chat.sentMsg}</p> :
+                                        <p className='p-2 px-3' id='recvMsg'>{chat.recieveMsg}</p>
+                                    }
+                                    
+                                    
                                 </div>
                             ))
                         }

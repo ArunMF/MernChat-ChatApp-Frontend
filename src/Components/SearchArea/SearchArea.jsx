@@ -146,6 +146,7 @@ function SearchArea() {
 
             {/* All requests */}
             {
+              allReq.length>0 ?
               allReq.map((req) => (
                 <Row className='border-bottom border-top rounded py-2 my-2 mx-1' id='request'>
                   <Col className='col-2'>
@@ -161,7 +162,10 @@ function SearchArea() {
                     <button onClick={()=>handleDeleteReq(req.id)} className='h-50 mt-3 ms-3 border-0 bg-white text-danger'><b><i class="fa-solid fa-xmark fs-5"></i></b></button>
                   </Col>
                 </Row>
-              ))
+              )) : 
+              <div style={{height:"100%",paddingTop:"50%"}}>
+                <h6 className='text-center text-secondary'>No chat requests</h6>
+              </div>
             }
 
           </div>
@@ -172,7 +176,7 @@ function SearchArea() {
       {/* Search */}
       <Row className='mt-4 mb-2' id='search'>
         <Col className='col-10'>
-          <input type="search" onChange={(e) => setSearchname(e.target.value)} placeholder='🔍 Search people here...' className='form-control w-100' style={{ height: "40px", fontSize: "16px" }} />
+          <input type="search" onChange={(e) => setSearchname(e.target.value)} placeholder='Search people here...' className='form-control w-100' style={{ height: "40px", fontSize: "16px" }} />
         </Col>
         <Col className='col-2' >
           <button onClick={handleSearchUser} className='btn btn-primary' style={{ marginLeft: "-20px", height: "40px" }}><i class="fa-solid fa-magnifying-glass"></i></button>
